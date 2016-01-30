@@ -1,4 +1,5 @@
-var myApp = angular.module('teacherApp', []);
+var myApp = angular.module('teacherApp', ['ngResource', 'ngRoute']);
+
 myApp.controller('tableManage', ['$scope', '$http', function($scope, $http) {
 
     $http.get('/dbapi/movies').success(function(response){
@@ -8,6 +9,22 @@ myApp.controller('tableManage', ['$scope', '$http', function($scope, $http) {
 
     console.log("Hello World from tableManage");
 }]);
+
+
+/*
+ angular.module('sayso', ['ngRoute', 'ngSanitize'])
+ .constant('MOVIES_URL', 'data/movies.json')
+ .constant('SUBTITLES_URL', 'data/subtitles/movie.orig.json')
+ .config(['$routeProvider', function($routeProvider) {
+ $routeProvider
+ .when('/', {
+ controller: 'mainController',
+ controllerAs: 'main',
+ templateUrl: 'partials/main.html'
+ })
+ .otherwise('/');
+ }]);
+*/
 
 
 
