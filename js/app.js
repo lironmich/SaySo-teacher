@@ -1,12 +1,11 @@
-angular.module('sayso', ['ngRoute', 'ngSanitize'])
-    .constant('MOVIES_URL', 'data/movies.json')
-    .constant('SUBTITLES_URL', 'data/subtitles/movie.orig.json')
+angular.module('teacherApp', ['ngResource', 'ngRoute'])
     .config(['$routeProvider', function($routeProvider) {
+
         $routeProvider
-            .when('/', {
-                controller: 'mainController',
+            .when('/teacher', {
+                controller: 'movieTableManage',
                 controllerAs: 'main',
-                templateUrl: 'partials/main.html'
+                templateUrl: '/public/apps/SaySo-teacher/templates/Partials/movieList.ejs'
             })
             .otherwise('/');
     }]);
