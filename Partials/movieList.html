@@ -1,4 +1,3 @@
-<p></p>
 <div class="container">
 
     <input ng-model="test"></input>
@@ -12,8 +11,9 @@
                 <th>Name</th>
                 <th>Provider</th>
                 <th>Link</th>
-                <th>source_lan</th>
-                <th>dest_lans</th>
+                <th>source language</th>
+                <th>dest language</th>
+                <th>dest language</th>
             </tr>
             </thead>
             <tbody>
@@ -21,8 +21,9 @@
                 <td>{{movie.name}}</td>
                 <td>{{movie.provider}}</td>
                 <td>{{movie.link}}</td>
-                <td>{{movie.source_lan}}</td>
-                <td>{{movie.dest_lans}}</td>
+                <td>{{movie.source_lan[0].name}}</td>
+                <td>{{movie.dest_lans[0].name}}</td>
+                <td>{{movie.dest_lans[1].name}}</td>
             </tr>
             </tbody>
         </table>

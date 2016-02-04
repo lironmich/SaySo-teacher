@@ -1,11 +1,23 @@
 angular.module('teacherApp', ['ngResource', 'ngRoute'])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
-            .when('/', {
+            .when('/movies', {
                 controller: 'movieTableManage',
-                templateUrl: 'http://127.0.0.1:8888/public/apps/SaySo-teacher/templates/Partials/movieList.html'
+                templateUrl: 'http://127.0.0.1:8888/public/apps/SaySo-teacher/Partials/movieList.html'
             })
-            .otherwise('/');
+            .when('/languages', {
+                controller: 'languageTableManage',
+                templateUrl: 'http://127.0.0.1:8888/public/apps/SaySo-teacher/Partials/languageList.html'
+            })
+            .when('/movie/:id/:lansym', {
+                controller: 'movieManage',
+                templateUrl: 'http://127.0.0.1:8888/public/apps/SaySo-teacher/Partials/movie.html'
+            })
+            .when('/', {
+                controller:  'teacherManage',
+                templateUrl: 'http://127.0.0.1:8888/public/apps/SaySo-teacher/Partials/main.html'
+            })
+            .otherwise('/')
     }]);
 
 /*
