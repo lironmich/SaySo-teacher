@@ -1,0 +1,36 @@
+<div class="user-subtitles-input">
+    <div class="source-lang">
+       <span>
+           source:
+       </span>
+
+        <input ng-model="sourceLang"/>
+
+        <button ng-show="sourceLang"
+                ng-click="loadGoogleTranslate()">
+            load from google translate
+        </button>
+
+        <button ng-show="sourceLang"
+                ng-click="loadSrt()">
+            load from srt file
+        </button>
+    </div>
+    <div class="target-lang">
+       <span>
+           target:
+       </span>
+
+        <input ng-model="targetLang"/>
+
+        <button ng-show="targetLang"
+                ng-click="mergeGoogleTranslate()">
+            merge from google translate
+        </button>
+
+        <button ng-show="targetLang"
+                ng-click="mergeSrc()">
+            merge from srt file
+        </button>
+    </div>
+</div>
